@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FreeCourse.Services.Catalog.Dtos
+namespace FreeCourse.Services.Catalog.Services
 {
-    internal class FeatureDto
+    interface ICategoryService
     {
-        public int Duration { get; set; }
     }
 }
