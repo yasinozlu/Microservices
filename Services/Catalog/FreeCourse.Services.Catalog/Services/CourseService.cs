@@ -11,11 +11,10 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Services
 {
-    internal class CourseService:ICourseService
+    public class CourseService:ICourseService
     {
         private readonly IMongoCollection<Course> _courseCollection;
         private readonly IMongoCollection<Category> _categoryCollection;
-
         private readonly IMapper _mapper;
 
         public CourseService(IMapper mapper,IDatabaseSettings databaseSettings)
@@ -45,6 +44,7 @@ namespace FreeCourse.Services.Catalog.Services
             {
                 courses = new List<Course>();
             }
+
             return Response<List<CourseDto>>.Success(_mapper.Map<List<CourseDto>>(courses), 200);
         }
 
