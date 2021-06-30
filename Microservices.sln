@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.IdentityServer", "IdentityServer\FreeCourse.IdentityServer\FreeCourse.IdentityServer.csproj", "{1C2A5A2E-BA8E-4527-A81E-72A693A2D692}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{20EFA363-9DED-4ECD-B954-A9A9995E29F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.PhotoStock", "Services\PhotoStock\FreeCourse.Services.PhotoStock\FreeCourse.Services.PhotoStock.csproj", "{566247E0-7882-471A-BAC6-18B15E745CC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,10 @@ Global
 		{1C2A5A2E-BA8E-4527-A81E-72A693A2D692}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C2A5A2E-BA8E-4527-A81E-72A693A2D692}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C2A5A2E-BA8E-4527-A81E-72A693A2D692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566247E0-7882-471A-BAC6-18B15E745CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566247E0-7882-471A-BAC6-18B15E745CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566247E0-7882-471A-BAC6-18B15E745CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566247E0-7882-471A-BAC6-18B15E745CC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +57,8 @@ Global
 		{AE42859D-1302-4EAD-91AE-FD6E4C0F9EF6} = {14D7D118-30C8-48E2-979E-33280E6FAB96}
 		{A2DCB7BA-C8EA-416A-A4CA-5EC8A1986A69} = {5AFE8AE9-1F3F-4389-A08F-5EBE92FC8141}
 		{1C2A5A2E-BA8E-4527-A81E-72A693A2D692} = {A63A9D0E-49B2-4896-8307-16C643DB1467}
+		{20EFA363-9DED-4ECD-B954-A9A9995E29F2} = {845C58EC-798D-43D8-999C-0426A90873A4}
+		{566247E0-7882-471A-BAC6-18B15E745CC4} = {20EFA363-9DED-4ECD-B954-A9A9995E29F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AA74CD6-2B6F-4DD6-938D-1C2F1685CC63}
