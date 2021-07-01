@@ -30,6 +30,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{C49BE5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.Basket", "Services\Basket\FreeCourse.Services.Basket\FreeCourse.Services.Basket.csproj", "{CBF1611E-C9D5-4C0C-A624-43D6D1E446EF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{6EAC5E72-40E4-4472-B731-DCD5DD4ECE0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.Discount", "Services\Discount\FreeCourse.Services.Discount\FreeCourse.Services.Discount.csproj", "{991DBD14-8E7E-4F2B-8AA8-1EA0550BF193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +60,10 @@ Global
 		{CBF1611E-C9D5-4C0C-A624-43D6D1E446EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBF1611E-C9D5-4C0C-A624-43D6D1E446EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBF1611E-C9D5-4C0C-A624-43D6D1E446EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991DBD14-8E7E-4F2B-8AA8-1EA0550BF193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991DBD14-8E7E-4F2B-8AA8-1EA0550BF193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991DBD14-8E7E-4F2B-8AA8-1EA0550BF193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991DBD14-8E7E-4F2B-8AA8-1EA0550BF193}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +77,8 @@ Global
 		{566247E0-7882-471A-BAC6-18B15E745CC4} = {20EFA363-9DED-4ECD-B954-A9A9995E29F2}
 		{C49BE542-5D20-4BF2-93CC-4B814F48A5DD} = {845C58EC-798D-43D8-999C-0426A90873A4}
 		{CBF1611E-C9D5-4C0C-A624-43D6D1E446EF} = {C49BE542-5D20-4BF2-93CC-4B814F48A5DD}
+		{6EAC5E72-40E4-4472-B731-DCD5DD4ECE0F} = {845C58EC-798D-43D8-999C-0426A90873A4}
+		{991DBD14-8E7E-4F2B-8AA8-1EA0550BF193} = {6EAC5E72-40E4-4472-B731-DCD5DD4ECE0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AA74CD6-2B6F-4DD6-938D-1C2F1685CC63}
