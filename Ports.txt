@@ -4,4 +4,6 @@ Services
   -BasketApi => 5013
   -DiscountApi => 5014
   -OrderApi => 5015
+  -PaymentApi => 5016
 IdentityServer=> 5001
+Gateway => 5000
