@@ -70,7 +70,7 @@ namespace FreeCourse.IdentityServer
                 new Client
                 {
                     ClientName = "Asp.Net Core Mvc",
-                    ClientId = "WebMvcClientForUser",
+                    ClientId = "WebClientForUser",
                     AllowOfflineAccess = true,
                     ClientSecrets = {new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
