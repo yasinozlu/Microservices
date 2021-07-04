@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<CourseViewModel>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Tüm Kurslar</h5>
+        @if (Model.Any())
+        {
+
+            @foreach (var item in Model)
+            {
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@item.Name</h5>
+                            <small>@item.Price</small>
+                        </div>
+                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                        <small>@item.Feature.Duration</small>
+                    </a>
+                </div>
+            }
+
+        }
+        else
+        {
+            <div class="alert alert-info" role="alert">
+                Satın alınmış bir kursunuz bulunmamaktadır.
+            </div>
+        }
+    </div>
+</div>
+
