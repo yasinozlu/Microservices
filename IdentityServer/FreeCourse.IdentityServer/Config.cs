@@ -40,7 +40,7 @@ namespace FreeCourse.IdentityServer
             new ApiScope[]
             {
                 new ApiScope("catalog_fullpermission","Catolog API için full erişim"),
-                new ApiScope("photostock_fullpermission","Photo Stock API için full erişim"),
+                new ApiScope("photo_stock_fullpermission","Photo Stock API için full erişim"),
                 new ApiScope("basket_fullpermission","Basket API için full erişim"),
                 new ApiScope("discount_fullpermission","Discount API için full erişim"),
                 new ApiScope("order_fullpermission","Order API için full erişim"),
@@ -65,17 +65,23 @@ namespace FreeCourse.IdentityServer
                     ClientId = "WebMvcClient",
                     ClientSecrets = {new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = { "catalog_fullpermission", "photostock_fullpermission", "gateway_fullpermission",IdentityServerConstants.LocalApi.ScopeName},
+                    AllowedScopes = {
+                        "catalog_fullpermission",
+                        "photo_stock_fullpermission",
+                        "gateway_fullpermission",
+                        IdentityServerConstants.LocalApi.ScopeName
+                    },
                 },
                 new Client
                 {
                     ClientName = "Asp.Net Core Mvc",
-                    ClientId = "WebClientForUser",
+                    ClientId = "WebMvcClientForUser",
                     AllowOfflineAccess = true,
                     ClientSecrets = {new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AllowedScopes = {
                         "catalog_fullpermission",
+                        "photo_stock_fullpermission",
                         "basket_fullpermission",
                         "discount_fullpermission",
                         "order_fullpermission",
