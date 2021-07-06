@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+@model CourseCreateInput
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Kurs Ekle</h5>
+                <form asp-controller="Courses" asp-action="Create" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly"></div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" asp-for="CategoryId"></label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="@ViewBag.categoryList">
+                            <option value="">Kategori seçiniz</option>
+                        </select>
+                        <span class="text-danger" asp-validation-for="CategoryId"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input type="text" asp-for="Name" class="form-control">
+                        <span asp-validation-for="Name"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Price"></label>
+                        <input type="text" asp-for="Price" class="form-control">
+                        <span asp-validation-for="Price"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Description"></label>
+                        <textarea type="text" asp-for="Description" class="form-control"></textarea>
+                        <span asp-validation-for="Description"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Feature.Duration"></label>
+                        <input type="number" asp-for="Feature.Duration" class="form-control">
+                        <span asp-validation-for="Feature.Duration"></span>
+                    </div>
+
+                    @*Resim Alanı gelicek*@
+
+                    <button type="submit" class="btn btn-primary">Kursu Kaydet</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
