@@ -3,26 +3,30 @@
     ViewData["Title"] = "Index";
 }
 @model UserViewModel
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Kullanıcı Adı</th>
-            <th scope="col">Email</th>
-            <th scope="col">Şehir</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">@Model.UserName</th>
-            <td>@Model.Email</td>
-            <td>@Model.City</td>
-        </tr>
-    </tbody>
-</table>
+    <div class="row">
+        <div class="col-9">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Kullanıcı Adı</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Şehir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.UserName</td>
+                        <td>@Model.Email</td>
+                        <td>@Model.City</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-3">
+            <div class="list-group">
+                <a asp-controller="Courses" asp-action="Index" class="list-group-item list-group-item-action bg-success">Kurslarım</a>
+            </div>
+        </div>
+    </div>
 
-<div class="list-group">
-
-    <a asp-controller="Courses" asp-action="Index" class="list-group-item list-group-item-action">Kurslarım</a>
-
-</div>
 

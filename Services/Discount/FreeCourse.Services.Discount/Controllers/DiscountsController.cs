@@ -40,7 +40,7 @@ namespace FreeCourse.Services.Discount.Controllers
         [Route("/api/[controller]/[action]/{code}")]
         public async Task<IActionResult> GetByCode(string code)
         {
-            var userId =  _sharedIdentityService.GetUserID;
+            var userId =  _sharedIdentityService.GetUserId;
             var discount = await _discountService.GetByCodeAndUserId(code, userId);
             return CreateActionResultInstance(discount);
         }

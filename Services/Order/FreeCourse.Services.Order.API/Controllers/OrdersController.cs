@@ -28,7 +28,7 @@ namespace FreeCourse.Services.Order.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetOrders()
         {
-            var response = await _mediator.Send(new GetOrdersByUserIdQuery{ UserId = _sharedIdentityService.GetUserID});
+            var response = await _mediator.Send(new GetOrdersByUserIdQuery{ UserId = _sharedIdentityService.GetUserId });
 
             return CreateActionResultInstance(response);
         }

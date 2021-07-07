@@ -11,19 +11,22 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Web.Extensions
 {
-    public static class ServicesExtension
+    public static class ServiceExtension
     {
-        public static void AddHttpClientServices(this IServiceCollection services,IConfiguration Configuration)
+        public static void AddHttpClientServices(this IServiceCollection services, IConfiguration Configuration)
         {
             var serviceApiSettings = Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
-            services.AddHttpClient<IIdentityService, IdentityService>();
             services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
+            services.AddHttpClient<IIdentityService, IdentityService>();
 
             services.AddHttpClient<ICatalogService, CatalogService>(opt =>
+
             {
                 opt.BaseAddress = new Uri($"{serviceApiSettings.GatewayBaseUri}/{serviceApiSettings.Catalog.Path}");
             }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
+
             services.AddHttpClient<IPhotoStockService, PhotoStockService>(opt =>
+
             {
                 opt.BaseAddress = new Uri($"{serviceApiSettings.GatewayBaseUri}/{serviceApiSettings.PhotoStock.Path}");
             }).AddHttpMessageHandler<ClientCredentialTokenHandler>();

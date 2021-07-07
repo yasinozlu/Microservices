@@ -1,5 +1,6 @@
 ﻿using FreeCourse.Web.Models.Baskets;
 using FreeCourse.Web.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Web.Controllers
 {
+    [Authorize]
     public class BasketController : Controller
     {
         private readonly ICatalogService _catalogService;
@@ -23,18 +25,17 @@ namespace FreeCourse.Web.Controllers
         {
             return View(await _basketService.Get());
         }
-
         public async Task<IActionResult> AddBasketItem(string courseId)
         {
             var course = await _catalogService.GetByCourseId(courseId);
 
-            var basketItem = new BasketItemViewModel() { CourseId = course.Id,CourseName=course.Name,Price = course.Price };
+            var basketItem = new BasketItemViewModel { CourseId = course.Id, CourseName = course.Name, Price = course.Price };
 
             await _basketService.AddBasketItem(basketItem);
 
             return RedirectToAction(nameof(Index));
         }
-
+    
         public async Task<IActionResult> RemoveBasketItem(string courseId)
         {
             await _basketService.RemoveBasketItem(courseId);

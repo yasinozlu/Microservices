@@ -22,19 +22,20 @@ namespace FreeCourse.Web.Services
         public async Task AddBasketItem(BasketItemViewModel basketItemViewModel)
         {
             var basket = await Get();
+
             if (basket != null)
             {
-                if (!basket.BasketItems.Any(x=>x.CourseId == basketItemViewModel.CourseId))
+                if (!basket.BasketItems.Any(x => x.CourseId == basketItemViewModel.CourseId))
                 {
                     basket.BasketItems.Add(basketItemViewModel);
                 }
             }
-
             else
             {
                 basket = new BasketViewModel();
                 basket.BasketItems.Add(basketItemViewModel);
             }
+
             await SaveOrUpdate(basket);
         }
 
@@ -57,11 +58,13 @@ namespace FreeCourse.Web.Services
         public async Task<BasketViewModel> Get()
         {
             var response = await _httpClient.GetAsync("baskets");
-            if (response.IsSuccessStatusCode)
+
+            if (!response.IsSuccessStatusCode)
             {
                 return null;
             }
             var basketViewModel = await response.Content.ReadFromJsonAsync<Response<BasketViewModel>>();
+
             return basketViewModel.Data;
         }
 
@@ -93,9 +96,9 @@ namespace FreeCourse.Web.Services
 
         public async Task<bool> SaveOrUpdate(BasketViewModel basketViewModel)
         {
-            var responsee = await _httpClient.PostAsJsonAsync<BasketViewModel>("baskets", basketViewModel);
+            var response = await _httpClient.PostAsJsonAsync<BasketViewModel>("baskets", basketViewModel);
 
-            return responsee.IsSuccessStatusCode;
+            return response.IsSuccessStatusCode;
         }
     }
 }

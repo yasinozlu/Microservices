@@ -15,6 +15,6 @@ namespace FreeCourse.Shared.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public string GetUserID => _httpContextAccessor.HttpContext.User.FindFirst("sub").Value;
+        public string GetUserId => _httpContextAccessor.HttpContext.User.FindFirst("sub").Value;
     }
 }

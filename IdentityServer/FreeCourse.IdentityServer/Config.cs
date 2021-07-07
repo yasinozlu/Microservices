@@ -68,6 +68,7 @@ namespace FreeCourse.IdentityServer
                     AllowedScopes = {
                         "catalog_fullpermission",
                         "photo_stock_fullpermission",
+                        "basket_fullpermission",
                         "gateway_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName
                     },
