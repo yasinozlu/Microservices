@@ -28,8 +28,8 @@
                             <tr>
                                 <td>@item.CourseName</td>
                                 <td>
-                                    @item.GetCurrentPrice TL 
-                                    
+                                    @item.GetCurrentPrice TL
+
                                     @if (Model.HasDiscount)
                                     {<s>@item.Price TL</s>}
 
@@ -81,6 +81,8 @@
                             <div class="text-danger">@TempData["discountError"] </div>
                         }
                     </form>
+                    <a class="btn btn-success" asp-controller="Order" asp-action="Checkout">Ödeme bilgileri</a>
+                    <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Kursları incelemeye devam et</a>
                 }
                 else
                 {

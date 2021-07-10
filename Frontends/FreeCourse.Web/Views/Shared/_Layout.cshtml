@@ -27,11 +27,12 @@
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                   Hoşgeldiniz @User.Identity.Name
+                                    Hoşgeldiniz @User.Identity.Name
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" asp-controller="User" asp-action="Index">Profile</a></li>
                                     <li><a class="dropdown-item" asp-controller="Basket" asp-action="Index">Sepetim</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Order" asp-action="CheckoutHistory">Ödeme Geçmişi</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" asp-controller="Auth" asp-action="Logout">Çıkış Yap</a></li>
                                 </ul>
@@ -59,6 +60,7 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap-5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
