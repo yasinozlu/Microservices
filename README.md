@@ -16,6 +16,8 @@ Domain Driven Design
 
 CQRS Pattern
 
+Redis
+
 PostgreSQL
 
 MongoDB
