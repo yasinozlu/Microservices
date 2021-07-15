@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Web.Models.Orders
 {
-    public class OrderCreatedViewModel
+    public class OrderSuspendViewModel
     {
-        public int OrderId { get; set; }
         public string Error { get; set; }
         public bool IsSuccessfull { get; set; }
     }

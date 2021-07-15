@@ -30,8 +30,11 @@ namespace FreeCourse.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Checkout(CheckoutInfoInput checkoutInfoInput)
         {
+            //1.yol
+            //var orderSuspend = await _orderService.CreateOrder(checkoutInfoInput);
 
-            var orderSuspend = await _orderService.CreateOrder(checkoutInfoInput);
+            //2. yol
+            var orderSuspend = await _orderService.SuspendOrder(checkoutInfoInput);
             if (!orderSuspend.IsSuccessfull)
             {
                 var basket = await _basketService.Get();
