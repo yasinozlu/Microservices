@@ -2,7 +2,7 @@
 
 Asynchronous and Aynchronous between Microservices
 
-API Gateway ( Ocelot Libarary)
+API Gateway ( Ocelot Library)
 
 RabbitMQ
 
