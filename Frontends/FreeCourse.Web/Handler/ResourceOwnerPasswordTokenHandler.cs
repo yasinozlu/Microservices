@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Web.Handler
 {
-    public class ResourceOwnerPasswordTokenHandler:DelegatingHandler
+    public class ResourceOwnerPasswordTokenHandler : DelegatingHandler
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IIdentityService _identityService;
@@ -34,11 +34,11 @@ namespace FreeCourse.Web.Handler
 
             var response = await base.SendAsync(request, cancellationToken);
 
-            if (response.StatusCode== System.Net.HttpStatusCode.Unauthorized)
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {
                 var tokenResponse = await _identityService.GetAccessTokenByRefreshToken();
 
-                if (tokenResponse!=null)
+                if (tokenResponse != null)
                 {
                     request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", tokenResponse.AccessToken);
 
@@ -48,7 +48,6 @@ namespace FreeCourse.Web.Handler
 
             if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {
-                //hata gönderimi
                 throw new UnAuthorizeException();
             }
 

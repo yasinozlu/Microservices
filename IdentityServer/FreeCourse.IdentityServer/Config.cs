@@ -81,6 +81,8 @@ namespace FreeCourse.IdentityServer
                     ClientSecrets = {new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AllowedScopes = {
+                         "discount_fullpermission",
+                        "fakepayment_fullpermission",
                         "catalog_fullpermission",
                         "photo_stock_fullpermission",
                         "basket_fullpermission",                     
